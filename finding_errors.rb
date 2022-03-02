@@ -33,3 +33,21 @@ elsif origin > 1900 && origin < 2020
 else
   puts "That's the future!"
 end
+
+# Exercise 4: Make a class to store and display a person’s info.
+class Person
+  attr_accessor :first_name, :last_name
+
+  def initialize(inputs)
+    @first_name = inputs[:first_name]
+    @last_name = inputs[:last_name]
+  end
+
+  def full_name
+    @last_name + ", " + @first_name
+  end
+end
+
+tj = Person.new(first_name: "Thomas", last_name: "Jefferson")
+puts tj.first_name
+puts tj.full_name
