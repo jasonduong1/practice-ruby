@@ -18,12 +18,26 @@ class Vehicle
 end
 
 class Car < Vehicle
+  def initialize
+    super
+    @make = "Toyota"
+    @model = "Camry"
+    @year = "1990"
+  end
+
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
 class Bike < Vehicle
+  def initialize
+    super
+    @type = "street"
+    @weight = 30
+    @color = "orange"
+  end
+
   def ring_bell
     puts "Ring ring!"
   end
@@ -35,3 +49,5 @@ car1.accelerate
 bike1.accelerate
 car1.honk_horn
 bike1.ring_bell
+p car1
+p bike1
